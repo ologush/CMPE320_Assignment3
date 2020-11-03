@@ -14,6 +14,8 @@
 		F0D83BA825506ADD00C4952A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D83BA725506ADD00C4952A /* main.m */; };
 		F0D83BB325506ADD00C4952A /* CMPE320_Assignment3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D83BB225506ADD00C4952A /* CMPE320_Assignment3Tests.m */; };
 		F0D83BBE25506ADD00C4952A /* CMPE320_Assignment3UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D83BBD25506ADD00C4952A /* CMPE320_Assignment3UITests.m */; };
+		F0D83BE02551C90200C4952A /* Libraries in Resources */ = {isa = PBXBuildFile; fileRef = F0D83BDF2551C90200C4952A /* Libraries */; };
+		F0D83BE32551CCFB00C4952A /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D83BE22551CCFB00C4952A /* Fraction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		F0D83BB925506ADD00C4952A /* CMPE320_Assignment3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMPE320_Assignment3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0D83BBD25506ADD00C4952A /* CMPE320_Assignment3UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMPE320_Assignment3UITests.m; sourceTree = "<group>"; };
 		F0D83BBF25506ADD00C4952A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0D83BDF2551C90200C4952A /* Libraries */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Libraries; sourceTree = "<group>"; };
+		F0D83BE12551CBA100C4952A /* Fraction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		F0D83BE22551CCFB00C4952A /* Fraction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +105,12 @@
 		F0D83B9A25506ADB00C4952A /* CMPE320_Assignment3 */ = {
 			isa = PBXGroup;
 			children = (
+				F0D83BDF2551C90200C4952A /* Libraries */,
 				F0D83B9B25506ADB00C4952A /* AppDelegate.h */,
 				F0D83B9C25506ADB00C4952A /* AppDelegate.m */,
 				F0D83B9E25506ADB00C4952A /* ViewController.h */,
+				F0D83BE12551CBA100C4952A /* Fraction.h */,
+				F0D83BE22551CCFB00C4952A /* Fraction.m */,
 				F0D83B9F25506ADB00C4952A /* ViewController.m */,
 				F0D83BA125506ADD00C4952A /* Assets.xcassets */,
 				F0D83BA325506ADD00C4952A /* Main.storyboard */,
@@ -234,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D83BE02551C90200C4952A /* Libraries in Resources */,
 				F0D83BA225506ADD00C4952A /* Assets.xcassets in Resources */,
 				F0D83BA525506ADD00C4952A /* Main.storyboard in Resources */,
 			);
@@ -263,6 +272,7 @@
 				F0D83BA025506ADB00C4952A /* ViewController.m in Sources */,
 				F0D83BA825506ADD00C4952A /* main.m in Sources */,
 				F0D83B9D25506ADB00C4952A /* AppDelegate.m in Sources */,
+				F0D83BE32551CCFB00C4952A /* Fraction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#include <dlfcn.h>
 
 
 @interface ViewController : NSViewController
@@ -40,6 +40,7 @@
 
 
 - (IBAction)Equals:(NSButton *)sender;
+
 
 
 

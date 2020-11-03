@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#include <dlfcn.h>
 
 @implementation ViewController
 
@@ -15,10 +16,7 @@
 @synthesize NumeratorTwo;
 @synthesize DenominatorTwo;
 
-@synthesize NumOneValue;
-@synthesize DenomOneValue;
-@synthesize NumTwoValue;
-@synthesize DenomTwoValue;
+
 
 @synthesize NumeratorOneCell;
 
@@ -35,9 +33,18 @@ int denominatorTwo;
 NSString *test = @"";
 
 
+void *handle;
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    handle = dlopen("/Libraries/libFraction.dylib", RTLD_LAZY);
+    
+   // *handle = dlopen("/lib/Fraction.dylib", RTLD_LAZY);
+    
+    
+    
 
     // Do any additional setup after loading the view.
 }
