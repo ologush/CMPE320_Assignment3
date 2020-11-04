@@ -27,13 +27,14 @@
 @property (strong) IBOutlet NSTextField *Output;
 
 
-
+@property (strong, nonatomic) IBOutlet NSPopUpButton *OperandSelector;
 
 
 
 - (IBAction)Equals:(NSButton *)sender;
 
-@property (strong, nonatomic) IBOutlet NSPopUpButton *OperandSelector;
+- (IBAction)TextDidChange:(id)sender;
+
 
 
 @end

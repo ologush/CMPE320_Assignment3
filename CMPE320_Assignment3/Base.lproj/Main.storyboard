@@ -685,7 +685,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Fraction Calculator by Oliver Logush" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -713,12 +713,15 @@
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHT-ES-dU4">
                                 <rect key="frame" x="20" y="210" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Numerator" placeholderString="Numerator" drawsBackground="YES" id="WKw-XP-V3p">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Numerator" drawsBackground="YES" id="WKw-XP-V3p">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="0i6-0E-xZO"/>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="TextDidChange:" target="XfG-lQ-9wD" id="Lxx-MS-oQD"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBb-ht-tND">
                                 <rect key="frame" x="364" y="160" width="96" height="21"/>
@@ -729,6 +732,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="TextDidChange:" target="XfG-lQ-9wD" id="LjY-kf-vCu"/>
+                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mhl-Kh-ZV5">
                                 <rect key="frame" x="364" y="210" width="96" height="21"/>
@@ -739,6 +745,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="TextDidChange:" target="XfG-lQ-9wD" id="KjP-J5-s0w"/>
+                                </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrf-3p-ob2">
                                 <rect key="frame" x="222" y="57" width="37" height="16"/>
@@ -768,6 +777,9 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
+                                <connections>
+                                    <action selector="TextDidChange:" target="XfG-lQ-9wD" id="Unp-7u-8nK"/>
+                                </connections>
                             </popUpButton>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcN-AN-bHM">
                                 <rect key="frame" x="20" y="160" width="96" height="21"/>
@@ -778,6 +790,9 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
+                                <connections>
+                                    <action selector="TextDidChange:" target="XfG-lQ-9wD" id="nCK-3T-aJf"/>
+                                </connections>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n3A-Fa-U8K">
                                 <rect key="frame" x="216" y="111" width="49" height="32"/>
@@ -785,6 +800,9 @@
                                 <buttonCell key="cell" type="push" title="=" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xtM-ij-cgf">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+DQ
+</string>
                                 </buttonCell>
                                 <connections>
                                     <action selector="Equals:" target="XfG-lQ-9wD" id="of5-Ba-jU3"/>
@@ -793,13 +811,10 @@
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="DenomOneValue" destination="hBW-Vz-cUk" id="4Dy-Ce-GCa"/>
                         <outlet property="DenomTwoValue" destination="Mlt-jh-cw2" id="8Gh-aE-qjS"/>
                         <outlet property="DenominatorOne" destination="zcN-AN-bHM" id="HXt-zX-qkg"/>
                         <outlet property="DenominatorTwo" destination="qBb-ht-tND" id="vT5-H1-SI2"/>
-                        <outlet property="NumOneValue" destination="0i6-0E-xZO" id="5d0-vo-RpK"/>
                         <outlet property="NumeratorOne" destination="pHT-ES-dU4" id="Ebl-US-UOV"/>
-                        <outlet property="NumeratorOneCell" destination="WKw-XP-V3p" id="6gd-dg-EsP"/>
                         <outlet property="NumeratorTwo" destination="Mhl-Kh-ZV5" id="dNd-0r-qv3"/>
                         <outlet property="OperandSelector" destination="7sx-ax-mVp" id="fxf-it-Vxg"/>
                         <outlet property="Output" destination="vrf-3p-ob2" id="Qrw-7m-zgo"/>

@@ -53,19 +53,55 @@ NSString *test = @"";
 }
 
 
-- (IBAction)SelectOperator:(NSPopUpButton *)sender {
+- (IBAction)TextDidChange:(id)sender {
+    Output.stringValue = @"";
 }
 
 - (IBAction)Equals:(NSButton *)sender {
     
-    numeratorOne = [NumeratorOne intValue];
-    numeratorTwo = [NumeratorTwo intValue];
     
-    denominatorOne = [DenominatorOne intValue];
-    denominatorTwo = [DenominatorTwo intValue];
     
-    Fraction* FractionOne = new Fraction(numeratorOne, denominatorOne);
-    Fraction* FractionTwo = new Fraction(numeratorTwo, denominatorTwo);
+    
+    
+    
+    
+    @try {
+        numeratorOne = [NumeratorOne intValue];
+        numeratorTwo = [NumeratorTwo intValue];
+        
+        denominatorOne = [DenominatorOne intValue];
+        denominatorTwo = [DenominatorTwo intValue];
+    } @catch (NSException *e) {
+        Output.stringValue = @"Please enter valid numbers";
+    }
+    
+    
+    Fraction* FractionOne;
+    Fraction* FractionTwo;
+    
+//    @try {
+//        FractionOne = new Fraction(numeratorOne, denominatorOne);
+//    }
+//    @catch (FractionException e) {
+//
+//    }
+//
+//
+//    @try {
+//        FractionTwo = new Fraction(numeratorTwo, denominatorTwo);
+//    }
+//    @catch (FractionException e) {
+//
+//    }
+    
+    try {
+        FractionOne = new Fraction(numeratorOne, denominatorOne);
+        FractionTwo = new Fraction(numeratorTwo, denominatorTwo);
+    } catch (FractionException e) {
+        cout << e.what() << endl;
+        Output.stringValue = @"Denominator cannot be zero";
+        
+    }
     
     Fraction result;
    
