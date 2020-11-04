@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #include <dlfcn.h>
+#include "Libraries/Fraction.h"
+#include <sstream>
 
 
 @interface ViewController : NSViewController
@@ -20,17 +22,7 @@
 
 @property (strong) IBOutlet NSTextField *DenominatorTwo;
 
-@property (strong) IBOutlet NSTextFieldCell *NumeratorOneCell;
 
-@property (strong) IBOutlet NSNumberFormatter *NumOneValue;
-
-@property (strong) IBOutlet NSNumberFormatter *DenomOneValue;
-
-
-@property (strong) IBOutlet NSNumberFormatter *NumTwoValue;
-
-
-@property (strong) IBOutlet NSNumberFormatter *DenomTwoValue;
 
 @property (strong) IBOutlet NSTextField *Output;
 
@@ -41,7 +33,7 @@
 
 - (IBAction)Equals:(NSButton *)sender;
 
-
+@property (strong, nonatomic) IBOutlet NSPopUpButton *OperandSelector;
 
 
 @end

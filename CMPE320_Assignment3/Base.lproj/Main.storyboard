@@ -719,9 +719,6 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
-                                <connections>
-                                    <action selector="textDidChange:" target="XfG-lQ-9wD" id="8aF-BY-hmk"/>
-                                </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBb-ht-tND">
                                 <rect key="frame" x="364" y="160" width="96" height="21"/>
@@ -761,11 +758,11 @@
                                     <menu key="menu" id="edj-QX-6XO">
                                         <items>
                                             <menuItem title="+" id="lP1-xe-8rZ"/>
-                                            <menuItem title="-" id="hFA-DH-9ON"/>
-                                            <menuItem title="*" id="h7q-kk-Ppg">
+                                            <menuItem title="-" tag="1" id="hFA-DH-9ON"/>
+                                            <menuItem title="*" tag="2" id="h7q-kk-Ppg">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
-                                            <menuItem title="/" id="0GH-5y-YVu">
+                                            <menuItem title="/" tag="3" id="0GH-5y-YVu">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
                                             </menuItem>
                                         </items>
@@ -808,6 +805,7 @@
                         <outlet property="NumeratorOne" destination="pHT-ES-dU4" id="Ebl-US-UOV"/>
                         <outlet property="NumeratorOneCell" destination="WKw-XP-V3p" id="6gd-dg-EsP"/>
                         <outlet property="NumeratorTwo" destination="Mhl-Kh-ZV5" id="dNd-0r-qv3"/>
+                        <outlet property="OperandSelector" destination="7sx-ax-mVp" id="fxf-it-Vxg"/>
                         <outlet property="Output" destination="vrf-3p-ob2" id="Qrw-7m-zgo"/>
                     </connections>
                 </viewController>
