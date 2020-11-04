@@ -38,32 +38,6 @@ NSString *test = @"";
 - (void)viewDidLoad {
     [super viewDidLoad];
     //Had to change C++ language dialect and C++ standard library in build settings
-    void* handle = dlopen("libFraction.dylib", RTLD_GLOBAL);
-    
-    if(!handle) {
-        NSLog(@"cant open lib");
-    }
-    
-    
-    
-    
-    
-    
-    Fraction_creator* NewFraction = (Fraction_creator*)dlsym(handle, "NewFraction");
-    
-    Fraction* test = NewFraction();
-    
-    Fraction test2 = Fraction(1, 2);
-    
-    cout << test2 << endl;
-    
-    
-    //char* (*test)(void) = dlsym(handle, "NewFraction");
-    
-   
-    if(test) {
-        NSLog(@"great success");
-    }
     
     
   
@@ -93,18 +67,9 @@ NSString *test = @"";
     Fraction* FractionOne = new Fraction(numeratorOne, denominatorOne);
     Fraction* FractionTwo = new Fraction(numeratorTwo, denominatorTwo);
     
-    //FractionOne++;
-    //++FractionOne;
-    
-    cout << "Fraction One: " << FractionOne << endl;
-    cout << "Fraction Two: " << FractionTwo << endl;
-    
     Fraction result;
    
-    
     int operand = [OperandSelector selectedTag];
-    
-    cout << operand << endl;
     
     switch(operand) {
         case 0:
@@ -118,25 +83,13 @@ NSString *test = @"";
             break;
         case 3:
             result = *FractionOne / *FractionTwo;
-            
     }
     
     stringstream resultStream;
-    
     resultStream << result << endl;
     
-    //string resultString = resultStream.str();
-    
     NSString* resultString = [NSString stringWithUTF8String:resultStream.str().c_str()];
-    
-    
-    
     Output.stringValue = resultString;
-    
-    
-    
-    
-    
 }
 
 

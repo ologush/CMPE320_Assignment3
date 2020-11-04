@@ -768,9 +768,6 @@
                                         </items>
                                     </menu>
                                 </popUpButtonCell>
-                                <connections>
-                                    <action selector="SelectOperator:" target="XfG-lQ-9wD" id="syP-0g-ScP"/>
-                                </connections>
                             </popUpButton>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zcN-AN-bHM">
                                 <rect key="frame" x="20" y="160" width="96" height="21"/>
@@ -801,7 +798,6 @@
                         <outlet property="DenominatorOne" destination="zcN-AN-bHM" id="HXt-zX-qkg"/>
                         <outlet property="DenominatorTwo" destination="qBb-ht-tND" id="vT5-H1-SI2"/>
                         <outlet property="NumOneValue" destination="0i6-0E-xZO" id="5d0-vo-RpK"/>
-                        <outlet property="NumTwoValue" destination="WKm-F7-X8T" id="Kik-aC-6bg"/>
                         <outlet property="NumeratorOne" destination="pHT-ES-dU4" id="Ebl-US-UOV"/>
                         <outlet property="NumeratorOneCell" destination="WKw-XP-V3p" id="6gd-dg-EsP"/>
                         <outlet property="NumeratorTwo" destination="Mhl-Kh-ZV5" id="dNd-0r-qv3"/>

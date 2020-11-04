@@ -28,7 +28,7 @@
 
 
 
-- (IBAction)SelectOperator:(NSPopUpButton *)sender;
+
 
 
 - (IBAction)Equals:(NSButton *)sender;
