@@ -42,8 +42,7 @@ class Fraction {
     friend istream& operator>>(istream& in, Fraction& destinationFraction);
 };
 
-extern "C" Fraction* NewFraction(void);
-typedef Fraction * Fraction_creator(void);
+
 
 
 Fraction operator-(const Fraction& firstTerm, const Fraction& secondTerm);

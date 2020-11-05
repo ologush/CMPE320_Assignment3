@@ -12,8 +12,8 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="CMPE320_Assignment3" id="1Xt-HY-uBw">
-                                <modifierMask key="keyEquivalentModifierMask"/>
+                            <menuItem title="CMPE320_Assignment3" state="on" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES"/>
                                 <menu key="submenu" title="CMPE320_Assignment3" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
                                         <menuItem title="About CMPE320_Assignment3" id="5kV-Vb-QxS">
@@ -28,6 +28,9 @@
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem title="Close" state="mixed" keyEquivalent="c" identifier="Close" id="hlp-hH-fYD">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
                                         <menuItem title="Hide CMPE320_Assignment3" keyEquivalent="h" id="Olw-nP-bQN">
@@ -675,7 +678,11 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+                    <connections>
+                        <outlet property="Close" destination="hlp-hH-fYD" id="wXF-ki-3M4"/>
+                    </connections>
+                </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -685,7 +692,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Fraction Calculator by Oliver Logush" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Fraction Calculator by Oliver Logush" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA" customClass="Window">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -713,7 +720,7 @@
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHT-ES-dU4">
                                 <rect key="frame" x="20" y="210" width="96" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Numerator" drawsBackground="YES" id="WKw-XP-V3p">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Numerator" drawsBackground="YES" id="WKw-XP-V3p">
                                     <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="0i6-0E-xZO"/>
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -749,24 +756,15 @@
                                     <action selector="TextDidChange:" target="XfG-lQ-9wD" id="KjP-J5-s0w"/>
                                 </connections>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vrf-3p-ob2">
-                                <rect key="frame" x="222" y="57" width="37" height="16"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="hnV-SQ-xSK">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7sx-ax-mVp">
                                 <rect key="frame" x="204" y="177" width="77" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <popUpButtonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="lP1-xe-8rZ" id="3ae-a7-xJX">
+                                <popUpButtonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="lP1-xe-8rZ" id="3ae-a7-xJX">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="edj-QX-6XO">
                                         <items>
-                                            <menuItem title="+" id="lP1-xe-8rZ"/>
+                                            <menuItem title="+" state="on" id="lP1-xe-8rZ"/>
                                             <menuItem title="-" tag="1" id="hFA-DH-9ON"/>
                                             <menuItem title="*" tag="2" id="h7q-kk-Ppg">
                                                 <modifierMask key="keyEquivalentModifierMask"/>
@@ -808,6 +806,15 @@ DQ
                                     <action selector="Equals:" target="XfG-lQ-9wD" id="of5-Ba-jU3"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="vrf-3p-ob2">
+                                <rect key="frame" x="17" y="64" width="447" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" borderStyle="bezel" alignment="center" title="lable" bezelStyle="round" id="hnV-SQ-xSK">
+                                    <font key="font" size="14" name="HelveticaNeue-Bold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>

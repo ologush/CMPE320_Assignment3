@@ -37,6 +37,7 @@ NSString *test = @"";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     //Had to change C++ language dialect and C++ standard library in build settings
     
     
@@ -57,42 +58,31 @@ NSString *test = @"";
     Output.stringValue = @"";
 }
 
+- (BOOL)isInt:(NSTextField *)stringToCheck {
+    if([ (NSString *)stringToCheck intValue]) {
+        return TRUE;
+    }
+    return FALSE;
+}
+
+
 - (IBAction)Equals:(NSButton *)sender {
     
-    
-    
-    
-    
-    
-    
-    @try {
-        numeratorOne = [NumeratorOne intValue];
-        numeratorTwo = [NumeratorTwo intValue];
-        
-        denominatorOne = [DenominatorOne intValue];
-        denominatorTwo = [DenominatorTwo intValue];
-    } @catch (NSException *e) {
+    if(!([self isInt:NumeratorOne] && [self isInt:NumeratorTwo] && [self isInt:DenominatorOne] && [self isInt:DenominatorTwo])) {
         Output.stringValue = @"Please enter valid numbers";
+        return;
     }
+    
+    numeratorOne = [NumeratorOne intValue];
+    numeratorTwo = [NumeratorTwo intValue];
+    
+    denominatorOne = [DenominatorOne intValue];
+    denominatorTwo = [DenominatorTwo intValue];
+    
     
     
     Fraction* FractionOne;
     Fraction* FractionTwo;
-    
-//    @try {
-//        FractionOne = new Fraction(numeratorOne, denominatorOne);
-//    }
-//    @catch (FractionException e) {
-//
-//    }
-//
-//
-//    @try {
-//        FractionTwo = new Fraction(numeratorTwo, denominatorTwo);
-//    }
-//    @catch (FractionException e) {
-//
-//    }
     
     try {
         FractionOne = new Fraction(numeratorOne, denominatorOne);
@@ -100,6 +90,7 @@ NSString *test = @"";
     } catch (FractionException e) {
         cout << e.what() << endl;
         Output.stringValue = @"Denominator cannot be zero";
+        return;
         
     }
     
@@ -122,14 +113,32 @@ NSString *test = @"";
     }
     
     stringstream resultStream;
-    resultStream << result << endl;
+    
+    if(result.numerator() == 0 || result.denominator() == 1) {
+        resultStream << result.numerator() << endl;
+    } else {
+        resultStream << result << endl;
+    }
     
     NSString* resultString = [NSString stringWithUTF8String:resultStream.str().c_str()];
     Output.stringValue = resultString;
 }
 
+- (void)keyDown:(NSEvent *)theEvent {
+    cout << "a" << endl;
+}
 
+- (BOOL)acceptFirstResponder {
+    return YES;
+}
 
+- (void)mouseDown:(NSEvent *)event {
+    cout << "b" << endl;
+}
+
+- (void)keyUp:(NSEvent *)event {
+    cout << "c" << endl;
+}
 
 
 
