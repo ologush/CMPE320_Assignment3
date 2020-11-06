@@ -18,7 +18,15 @@
 
 
 
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    
+    if(Close.isEnabled) {
+        NSLog(@"yes");
+    } else {
+        NSLog(@"No");
+    }
+    
     
     
     // Insert code here to initialize your application

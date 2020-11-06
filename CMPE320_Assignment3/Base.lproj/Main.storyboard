@@ -29,8 +29,11 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
-                                        <menuItem title="Close" state="mixed" keyEquivalent="c" identifier="Close" id="hlp-hH-fYD">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES"/>
+                                        <menuItem title="Close" keyEquivalent="c" identifier="Close" id="hlp-hH-fYD">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="sgV-RN-fJI"/>
+                                            </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
                                         <menuItem title="Hide CMPE320_Assignment3" keyEquivalent="h" id="Olw-nP-bQN">
@@ -678,13 +681,10 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
-                    <connections>
-                        <outlet property="Close" destination="hlp-hH-fYD" id="wXF-ki-3M4"/>
-                    </connections>
-                </customObject>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="EV9-aJ-imh"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
