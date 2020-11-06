@@ -37,13 +37,5 @@
 
 - (BOOL)isInt:(NSTextField *)stringToCheck;
 
-- (void)keyDown:(NSEvent *)theEvent;
-
-- (BOOL)acceptFirstResponder;
-
-- (void)mouseDown:(NSEvent *)event;
-
-- (void)keyUp:(NSEvent *)event;
-
 @end
 

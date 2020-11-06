@@ -10,8 +10,7 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-- (void)keyDown:(NSEvent *)event;
-@property (strong) IBOutlet NSMenuItem *Close;
+
 
 @end
 

@@ -21,19 +21,11 @@
 @synthesize Output;
 
 
-
 int numeratorOne;
 int denominatorOne;
 
 int numeratorTwo;
 int denominatorTwo;
-
-NSString *test = @"";
-
-
-
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -123,23 +115,5 @@ NSString *test = @"";
     NSString* resultString = [NSString stringWithUTF8String:resultStream.str().c_str()];
     Output.stringValue = resultString;
 }
-
-- (void)keyDown:(NSEvent *)theEvent {
-    cout << "a" << endl;
-}
-
-- (BOOL)acceptFirstResponder {
-    return YES;
-}
-
-- (void)mouseDown:(NSEvent *)event {
-    cout << "b" << endl;
-}
-
-- (void)keyUp:(NSEvent *)event {
-    cout << "c" << endl;
-}
-
-
 
 @end

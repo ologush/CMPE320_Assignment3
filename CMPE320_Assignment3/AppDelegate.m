@@ -14,18 +14,13 @@
 
 @implementation AppDelegate
 
-@synthesize Close;
+
 
 
 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
-    if(Close.isEnabled) {
-        NSLog(@"yes");
-    } else {
-        NSLog(@"No");
-    }
     
     
     
