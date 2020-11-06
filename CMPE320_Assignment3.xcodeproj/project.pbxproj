@@ -470,9 +470,9 @@
 				INFOPLIST_FILE = CMPE320_Assignment3/Info.plist;
 				LD_LIBRARY_PATH = "\"${SRCROOT}/CMPE320_Assignment3/Libraries\"";
 				LD_RUNPATH_SEARCH_PATHS = (
+					"\"${SRCROOT}/Libraries\"",
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-					"\"${SRC_ROOT}/Libraries\"",
 					"@loader_path/Libraries",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -497,13 +497,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLD_LIBRARY_PATH = "\"${SRCROOT}/CMPE320_Assignment3/Libraries\"";
-				"HEADER_SEARCH_PATHS[arch=*]" = "\"${SRC_ROOT}/Libraries\"";
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = CMPE320_Assignment3/Info.plist;
 				LD_LIBRARY_PATH = "\"${SRCROOT}/CMPE320_Assignment3/Libraries\"";
 				LD_RUNPATH_SEARCH_PATHS = (
+					"\"${SRCROOT}/Libraries\"",
 					"$(inherited)",
 					"@executable_path/../Frameworks",
-					"\"${SRC_ROOT}/Libraries\"",
 					"@loader_path/Libraries",
 				);
 				LIBRARY_SEARCH_PATHS = (

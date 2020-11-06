@@ -37,5 +37,7 @@
 
 - (BOOL)isInt:(NSTextField *)stringToCheck;
 
+- (BOOL)testInt:(NSTextField *)stringToCheck;
+
 @end
 

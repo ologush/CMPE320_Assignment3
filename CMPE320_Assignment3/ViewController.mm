@@ -51,10 +51,26 @@ int denominatorTwo;
 }
 
 - (BOOL)isInt:(NSTextField *)stringToCheck {
+    
+    NSString *string = [stringToCheck stringValue];
+    
+    
+    
+    
     if([ (NSString *)stringToCheck intValue]) {
+        return TRUE;
+    } else if([self testInt:stringToCheck]) {
         return TRUE;
     }
     return FALSE;
+}
+
+- (BOOL)testInt:(NSTextField *)stringToCheck {
+    NSCharacterSet* nonNumbers = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    NSString *str = [stringToCheck stringValue];
+    NSRange r = [str rangeOfCharacterFromSet: nonNumbers];
+    return r.location == NSNotFound && str.length > 0;
+    
 }
 
 
@@ -80,7 +96,6 @@ int denominatorTwo;
         FractionOne = new Fraction(numeratorOne, denominatorOne);
         FractionTwo = new Fraction(numeratorTwo, denominatorTwo);
     } catch (FractionException e) {
-        cout << e.what() << endl;
         Output.stringValue = @"Denominator cannot be zero";
         return;
         
